@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tulpen+One&display=swap" rel="stylesheet"> -->
+
+<style>
+
+    *{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+    /* font-family: 'Tulpen One', cursive; */
+    font-weight: bold;
+    }
+
+/* --------------------------------------- Only Header --------------------------------------- */
+
+nav{
+    width: 100%;
+    height: 80px;
+    background-color: rgba(3,29,42,255);
+    display: flex;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 30px;
+    position: fixed;
+}
+
+.abc{
+    color: rgba(245,102,8,255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+
+.uu{
+    font-size: 25px;
+    color: #89c937;
+}
+
+.image{
+/* border: 2px solid red;     */
+width: 100px;
+height: 80px;
+/* padding-right:50px; */
+/* margin-bottom: 100px; */
+}
+
+nav ul{
+float: left;    
+}
+
+
+nav ul li{
+display: inline-block;
+line-height: 80px;
+position: relative;
+}
+
+nav ul li a{
+    color: rgba(245,102,8,255);
+    text-decoration: none;
+    padding: 30px;
+    font-size: 17px;
+    
+}
+
+a:hover{
+    color: #89c937;
+    /* transition: 3s; */
+    /* cursor: pointer; */
+}
+
+button{
+width: 90px;
+height: 30px;
+margin-top: 25px;
+background-color: #89c937;
+border: none;
+color: white;
+border-radius: 20px;
+font-size: 15px;
+}
+
+/* --------------------------------------- Image After Header & Drop down on the Cusines --------------------------------------- */
+
+nav ul .dropdown{
+    /* I used here Position:Absolute not Poistion:Relative, because I want to show it's list nearest to it's ancestor */
+    position: absolute;
+    background-color: rgba(3,29,42,255);
+    text-align: center;
+    font-size: 17px;
+    top: 80px;    /*Fill out the gap between dropdown & Cusines*/
+    /* padding: 0%; */
+    /* margin: 0%; */
+    /* line-height: 0%; */
+    /* margin-top: 0%; */
+    display: none; /*When you hover the mouse on Cusines, then it will show it's drop down*/
+}
+
+nav ul li:hover .dropdown{
+    display: block;
+}
+
+nav ul .dropdown li{
+    width: 150px;
+}
+
+.fa-caret-down {
+padding-left: 5px;
+}
+
+.main-section {
+background-image: url(BG1.jpg);
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+width: 100%;
+height: 700px;
+/* padding-top: 200px; */
+}
+
+.Right{
+margin-top: 250px;
+width: 55%;
+float: left;
+/* text-align: center; */
+}
+
+.Title {
+font-size: 60px;
+color: white;
+}
+
+.main-para {
+color: white;
+}
+
+.main-btn {
+width: 200px;
+height: 30px;
+/* margin-top: 25px; */
+background-color: #89c937;
+border: none;
+color: white;
+border-radius: 20px;
+font-size: 15px;
+}
+
+/* --------------------------------------- Different Cusines Section --------------------------------------- */
+
+.MainMenu {
+color: white;
+background-color: rgba(3,29,42,255);
+width: 100%;
+height: 100px;
+font-size: 25px;
+display: flex;
+/* border: 8px dashed rgb(255, 255, 255); */
+padding-left: 500px;
+padding-top: 20px;
+}
+
+.container{
+background-color: rgba(3,29,42,255);
+width: 100%;
+height: 510px;
+display: flex;
+/* border: 8px dashed rgb(255, 255, 255); */
+justify-content: space-evenly; 
+/* padding-left: 500px; */
+/* align-items: flex-end; */
+}
+
+.box1 {
+border: 4px solid #89c937;
+/* color: white; */
+width: 350px;
+height: 500px;
+border-radius: 20px;
+/* padding-top: 300px; */
+/* font-size: 50px; */
+/* align-self: flex-end; */
+/* flex-grow: 0.5; */
+}
+
+.PakImage{
+width: 325px;
+height: 300px;
+padding-left: 15px;
+padding-top: 15px;
+border-radius: 20px;
+/* padding: 50px; */
+}
+
+.box2 {
+border: 4px solid #89c937 ;
+color: white;
+width: 350px;
+height: 500px;
+border-radius: 20px;
+/* padding-top: 290px; */
+/* font-size: 60px; */
+/* flex-grow: 0.8; */
+/* order: 4; */
+}
+
+.ChiImage{
+width: 325px;
+height: 270px;
+border-radius: 20px; 
+padding-Left: 15px;
+padding-top: 15px;
+}
+
+.box3 {
+border: 4px solid #89c937;
+color: white; 
+width: 350px;
+height: 500px;
+border-radius: 20px;
+/* align-self: flex-end; */
+/* order: -2; */
+/* flex-shrink: 10; */
+}
+
+.IndImage{
+width: 325px;
+height: 270px;
+padding-left: 15px;
+padding-top: 15px;
+border-radius: 20px;
+/* padding: 50px; */
+}
+
+.box4 {
+border: 4px solid #89c937;
+color: white;
+width: 350px;
+height: 500px;
+border-radius: 20px;
+/* padding-top: 300px; */
+/* order: -8; */
+/* align-self: flex-start; */
+/* font-size: 30px; */
+}
+
+.ItaImage{
+width: 325px;
+height: 290px;
+border-radius: 20px; 
+padding-Left: 15px;
+padding-top: 15px;
+}
+
+/* --------------------------------------- All in one --------------------------------------- */
+.AIO {
+color: white;
+background-color: rgba(3,29,42,255);
+width: 100%;
+height: 70px;
+font-size: 25px;
+/* display: flex; */
+padding-left: 590px;
+/* border: 8px dashed rgb(255, 255, 255); */
+}
+
+.grid{
+background-color: rgba(3,29,42,255);
+width: 100%;
+height: 1125px;
+display: grid;
+/* border: 4px dashed rgb(255, 255, 255); */
+grid-template-columns: 600px 300px 500px;
+grid-template-rows: 200px 250px 280px 310px;
+/* justify-content: space-between;  */
+grid-gap: 20px 10px;
+padding-left: 50px;
+}
+
+.items1{
+/* background-color: rgb(222, 164, 38); */
+background-image: url(Box\ 1.jfif);
+background-repeat: no-repeat;
+background-size: cover;
+}
+.items2{
+/* background-color: rgb(253, 133, 235); */
+background-image: url(Box\ 2.jfif);
+background-repeat: no-repeat;
+background-size: cover;
+}
+.items3{
+/* background-color: rgb(157, 62, 62); */
+background-image: url(Box\ 3.jfif);
+background-repeat: no-repeat;
+background-size: cover;
+}
+.items4{
+/* background-color: rgb(76, 252, 7); */
+grid-column: span 2;
+background-image: url(Box\ 4.jfif);
+background-repeat: no-repeat;
+background-size: cover;
+}
+.items5{
+/* background-color: rgb(232, 249, 47); */
+background-image: url(Box\ 5.jfif);
+background-repeat: no-repeat;
+background-size: cover;
+}
+.items6{
+/* background-color: rgb(16, 32, 180); */
+background-image: url(Box\ 6.jfif);
+background-repeat: no-repeat;
+background-size: cover;
+}
+.items7{
+/* background-color: rgb(255, 3, 3); */
+background-image: url(Box\ 7.jfif);
+background-repeat: no-repeat;
+background-size: cover;
+}
+.items8{
+/* background-color: rgb(81, 10, 80); */
+background-image: url(Box\ 8.jfif);
+background-repeat: no-repeat;
+background-size: cover;
+}
+.items9{
+/* background-color: rgb(255, 3, 3); */
+background-image: url(Box\ 9.jfif);
+background-repeat: no-repeat;
+background-size: cover;
+}
+.items10{
+/* background-color: rgb(81, 10, 80); */
+grid-column: span 2;
+background-image: url(box\ 10.jfif);
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+/* -------------------------------------------- Styling Of Footer --------------------------------------------------------- */
+.Footer
+        {
+        width: 100%;
+        height: 300px;
+        border: 2px solid green;
+        }
+.left
+{
+    
+}
+        
+
+</style>
+
+</head>
+<body>
+
+    <!----------------------------------- Nav Bar of the Page ------------------------------------>
+    <nav >
+
+        <!-- For starting Logo with website Name -->
+        <h1 class="abc" >F <span class="abc uu">ood
+        <h1 class="abc">W <span class="abc uu">ith</span></h1>
+        <h1 class="abc">Y <span class="abc uu">ou</span></h1>
+            
+        <img src="food.png" alt="" class="image" ></span>
+        </h1>
+
+        <!-- OR -->
+
+        <!-- Just only LOGO -->
+        <!-- <img src="food.png" alt="" class="image"> -->
+      
+        <ul>
+            <!-- Here we use Anchor tag in the list to make it clcikable -->
+            
+            <!-- In the first list we use one more tag that is "i" which is used for Home Flip Logo & for this we use the library after the Title -->
+            <li><i class="fa-solid fa-house fa-flip" style="color: #89c937;"></i><a href="">Home</a></li>
+
+            <!-- In the second list we are going to create another list for the drop down -->
+            <li><a href="">Cusines<i class=" abb fa-solid fa-caret-down" style="color: #89c937;"></i></a>
+
+            <ul class="dropdown">
+            <li><a href="Chinese.html">Chinese</a></li>
+            <li><a href="">Pakistani</a></li>
+            <li><a href="">Indian</a></li>
+            <li><a href="">Italian</a></li>
+            <li><a href="">Turkish</a></li>
+            </ul>
+
+            </li>
+
+            <!-- In the third list we give the file link in the "Href", if we clcik on the service then that file will be open -->
+            <li><a href="AnimationHW.css">About us</a></li>
+            <li><a href="">Contact Us</a></li>
+        </ul>
+        <button>Login</button>
+    </nav>
+
+    <!-- --------------------------------Slider Section "Section 2 with BackGround Image"--------------------------------- -->
+    <section class="main-section">
+        <div class="Right">
+            <h1 class="Title">WELCOME TO KARACHI STREET FOOD</h1>
+            <P class="main-para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate, qui. Natus nam
+                accusantium quam aperiam veritatis aspernatur minima minus? Reprehenderit .</P>
+            <button class="main-btn">Explore Further</button>
+        </div>
+    </section>
+
+    <!-- ----------------random data--------------- -->
+    <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo reprehenderit recusandae porro fugit incidunt omnis,
+    totam quos itaque, laudantium odit, aliquid labore praesentium cupiditate tempora ad dolore voluptatum ut
+    reiciendis.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo reprehenderit recusandae porro fugit incidunt omnis,
+    totam quos itaque, laudantium odit, aliquid labore praesentium cupiditate tempora ad dolore voluptatum ut
+    reiciendis.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo reprehenderit recusandae porro fugit incidunt omnis,
+    totam quos itaque, laudantium odit, aliquid labore praesentium cupiditate tempora ad dolore voluptatum ut
+    reiciendis.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo reprehenderit recusandae porro fugit incidunt omnis,
+    totam quos itaque, laudantium odit, aliquid labore praesentium cupiditate tempora ad dolore voluptatum ut
+    reiciendis.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo reprehenderit recusandae porro fugit incidunt omnis,
+    totam quos itaque, laudantium odit, aliquid labore praesentium cupiditate tempora ad dolore voluptatum ut
+    reiciendis.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo reprehenderit recusandae porro fugit incidunt omnis,
+    totam quos itaque, laudantium odit, aliquid labore praesentium cupiditate tempora ad dolore voluptatum ut
+    reiciendis.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo reprehenderit recusandae porro fugit incidunt omnis,
+    totam quos itaque, laudantium odit, aliquid labore praesentium cupiditate tempora ad dolore voluptatum ut
+    reiciendis. -->
+
+<!-- ---------------------------------------------Section 3 "Different Menu Heading"------------------------------------------ -->
+<div class = "MainMenu">
+    <h1>Different Cusines</h1>
+</div>
+
+<!-- ---------------------------------------------Section 4 "Different Menu Pictures"------------------------------------------ -->
+<div class="container">
+
+    <div class="box1">
+        <h2 style="color: rgba(245,102,8,255); text-align: center;">Pakistani</h2>
+        <p style="color: white; text-align: center;">What is the famous food of Pakistan? Pakistan is famous for its Moghul-inspired cuisine: pulaos, biryanis, kababs, and kormas. In contrast with India, Pakistan is known for its heavier use of meat, particularly beef.</p>
+        <img class= "PakImage" src="PakistaniFood.webp" alt="">
+    </div>
+
+    <div class="box2">
+        <img class= "ChiImage" src="Chinese Food.jfif" alt="">
+        <h2 style="color: rgba(245,102,8,255); text-align: center;">Chinese</h2>
+        <p style="color: white; text-align: center;">Traditional Chinese food has to always be fresh. Most dishes are filled with huge quantities of vegetables, grass-fed meats, seafood and herbs and spices. Every ingredient is handpicked for medicinal purposes. The Chinese people rarely eat canned/frozen food.</p>
+    </div>
+
+    <div class="box3">
+        <h2 style="color: rgba(245,102,8,255); text-align: center;">Indian</h2>
+        <p style="color: white; text-align: center;">Staple ingredients in Indian cooking include rice, tomatoes, potatoes, lentils, chickpeas, onions and yoghurt, and the most common spices used to flavor authentic Indian food include turmeric, cumin, coriander, mustard seeds, cardamom, chili, garlic, cloves, saffron, fennel, nutmeg, star anise, and fenugreek.</p>
+        <img class="IndImage" src="Indian food.avif" alt="">
+    </div>
+
+    <div class="box4">
+        <img class="ItaImage" src="Italian Food.jpg" alt="">
+        <h2 style="color: rgba(245,102,8,255); text-align: center;">Italian</h2>
+        <p style="color: white; text-align: center;">The Mediterranean diet forms the basis of Italian cuisine, rich in pasta, fish, fruits and vegetables. Cheese, cold cuts and wine are central to Italian cuisine, and along with pizza and coffee (especially espresso) form part of Italian gastronomic culture.</p>
+    </div>
+</div>
+
+<!-- ---------------------------------------------Section 5 "All in One Heading------------------------------------------ -->
+<div class = "AIO">
+    <h1>All in One</h1>
+</div>
+
+<div class="grid">
+    <div class="items items1"></div>
+    <div class="items items2"></div>
+    <div class="items items3"></div>
+
+    <div class="items items4"></div>
+    <div class="items items5"></div>
+
+    <div class="items items6"></div>
+    <div class="items items7"></div>
+    <div class="items items8"></div>
+
+    <div class="items items9"></div>
+    <div class="items items10"></div>
+</div>
+
+<!-- --------Section 6 "Footer" Comment out the Footer section because did not get the time to complete the CSS od the Footer---- -->
+<!-- <div class="Footer"> -->
+
+<!-- 1st Div for left Side -->
+<!-- <div class="left">
+<ul>
+    <li>QUICK LINK</li><br>
+    <li>Introduction</li>
+    <li>__________________________________________</li><br>
+    <li>Branches</li>
+    <li>__________________________________________</li><br>
+    <li>Frenchise</li>
+    <li>__________________________________________</li><br>
+    <li>Order Now</li>
+    <li>__________________________________________</li><br>
+</ul>
+</div> -->
+
+<!-- 2nd Div for right Side -->
+<!-- <div class="right">
+<div>
+<p>CONNECT</p>
+</div>
+<div>
+<ul>
+    <li><img style="width: 50px; height: 50px;" src="Remove Background of FB logo.png" alt=""></li>
+    <li><img style="width: 80px; height: 80%;" src="Remove Background of Instgram Logo.png" alt=""></li>
+    <li><img style="width: 50px; height: 50px;" src="Remove Background of Email Logo.png" alt=""></li>
+</ul>
+</div>
+
+</div> -->
+
+<!-- Last section of the footer (Copy Write One) -->
+<!-- <div></div> -->
+
+<!-- </div> -->
+
+</body>
+</html>
